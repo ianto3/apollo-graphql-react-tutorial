@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import { AUTH_TOKEN } from '../constants';
+import React from "react";
+import { Link, useHistory } from "react-router-dom";
+import { AUTH_TOKEN } from "../constants";
 
 const Header = () => {
   const history = useHistory();
@@ -14,23 +14,21 @@ const Header = () => {
           new
         </Link>
         <div className="ml1">|</div>
+        <Link to="/search" className="ml1 no-underline black">
+          search
+        </Link>
+        <div className="ml1">|</div>
         <Link to="/top" className="ml1 no-underline black">
           top
         </Link>
         <div className="ml1">|</div>
-        <Link
-          to="/search"
-          className="ml1 no-underline black"
-        >
+        <Link to="/search" className="ml1 no-underline black">
           search
         </Link>
         {authToken && (
           <div className="flex">
             <div className="ml1">|</div>
-            <Link
-              to="/create"
-              className="ml1 no-underline black"
-            >
+            <Link to="/create" className="ml1 no-underline black">
               submit
             </Link>
           </div>
@@ -48,10 +46,7 @@ const Header = () => {
             logout
           </div>
         ) : (
-          <Link
-            to="/login"
-            className="ml1 no-underline black"
-          >
+          <Link to="/login" className="ml1 no-underline black">
             login
           </Link>
         )}
